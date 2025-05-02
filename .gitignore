@@ -1,0 +1,108 @@
+# Dependencies
+node_modules/
+/.pnp
+.pnp.js
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+yarn.lock
+package-lock.json
+pnpm-lock.yaml
+
+# Build outputs
+/build/
+/dist/
+/.next/
+/out/
+/.nuxt/
+/.output/
+*.min.js
+*.min.css
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env*.local
+
+# IDE files
+# VS Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# JetBrains IDEs
+.idea/
+*.iml
+*.iws
+*.ipr
+.idea_modules/
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# OS files
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# Logs and debugging
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# Testing and coverage
+/coverage/
+/.nyc_output/
+.jest-cache/
+/cypress/videos/
+/cypress/screenshots/
+
+# Misc
+.cache/
+.temp/
+.tmp/
+tmp/
+temp/
+*.swp
+*.bak
+.eslintcache
+.stylelintcache
+.turbo
+
+# Database
+*.sqlite
+*.sqlite3
+*.db
+
+# Compiled output
+*.tsbuildinfo
+
+# Vscode
+.vscode/
