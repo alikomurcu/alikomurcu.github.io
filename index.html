@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ali Kömürcü's Personal Website</title>
-  <link rel="stylesheet" href="src/assets/styles.css">
-</head>
-<body>Z
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ali Kömürcü</title>
+    <link rel="stylesheet" href="src/assets/styles.css">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  </head>
+  
+<body>
   <header>
-    <h1>Welcome to My Personal Website</h1>
     <nav>
+      <div class="logo">Ali Kömürcü</div>
       <ul>
         <li><a href="#about">About</a></li>
         <li><a href="#experience">Experience</a></li>
@@ -19,40 +22,91 @@
     </nav>
   </header>
 
-  <section id="about">
-    <!-- Include About section -->
-    <h2>About Me</h2>
-    <div>
-      <!-- Content from About.html will be included here -->
-    </div>
-  </section>
+  <main>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        Hi, I'm Ali Kömürcü, a software engineer specializing in computer graphics with over 3 years of experience.
+        I build high-fidelity simulation environments in autonomous driving, maritime, and gaming industries.
+        Proficient in Unreal Engine, Unity, C++, Python, and real-time rendering systems.
+        I'm currently pursuing a Master's degree in Visual Computing at TU Wien.
+      </p>
+      <br>
+      <p>
+        <i class="fas fa-map-marker-alt"></i> Vienna, Austria 
+      </p>
+      <p class="social-icons">
+        <a href="mailto:alikomurcu32430@gmail.com"><i class="fas fa-envelope fa-lg"></i></a>
+        <a href="https://linkedin.com/in/alikomurcu" target="_blank"><i class="fab fa-linkedin fa-lg"></i></a>
+        <a href="https://github.com/alikomurcu" target="_blank"><i class="fab fa-github fa-lg"></i></a>
+        <a href="https://medium.com/@alikomurcu" target="_blank"><i class="fab fa-medium fa-lg"></i></a>
+      </p>
+      
+    </section>
 
-  <section id="experience">
-    <!-- Include Experience section -->
-    <h2>Experience</h2>
-    <div>
-      <!-- Content from Experience.html will be included here -->
-    </div>
-  </section>
+    <section id="experience">
+      <h2>Experience</h2>
+      <ul class="timeline">
+        <li>
+          <strong>Software Engineer – Kuartis</strong><br>
+          <span>Ankara, Turkey | Apr 2024 – Jan 2025</span>
+          <p>Built 3D simulation environments with Unreal Engine & Carla for autonomous driving. Developed KML-to-mesh converter and sensor simulators for LiDAR, Radar, and Cameras using C++ and ROS2.</p>
+        </li>
+        <li>
+          <strong>Software Engineer – SimBT</strong><br>
+          <span>Ankara, Turkey | Sep 2023 – Apr 2024</span>
+          <p>Created maritime simulations in Unity, including cloth/rope physics, LNG ship movement, and procedural fishing nets. Designed WPF UI panels for educational use.</p>
+        </li>
+        <li>
+          <strong>Software Engineer (Game Dev) – Beren Studio</strong><br>
+          <span>Ankara, Turkey | Jul 2022 – Mar 2023</span>
+          <p>Developed VR shooting and portal games in Unity with hand-based spaceship controls.</p>
+        </li>
+        <li>
+          <strong>AR Intern – Mia Tech</strong><br>
+          <span>Ankara, Turkey | Aug 2021 – Sep 2021</span>
+          <p>Built indoor AR navigation with Unity and ARKit/ARCore. Used Dijkstra’s algorithm for best-route finding.</p>
+        </li>
+      </ul>
+    </section>
 
-  <section id="education">
-    <!-- Include Education section -->
-    <h2>Education</h2>
-    <div>
-      <!-- Content from Education.html will be included here -->
-    </div>
-  </section>
+    <section id="education">
+      <h2>Education</h2>
+      <ul>
+        <li>
+          <strong>M.Sc. in Computer Science – TU Wien</strong><br>
+          <span>Vienna, Austria | Feb 2025 – Present</span><br>
+          Specialization in Visual Computing (Advanced Rendering)
+        </li>
+        <li>
+          <strong>B.Sc. in Computer Engineering – METU</strong><br>
+          <span>Ankara, Turkey | Jul 2023</span><br>
+          GPA: 3.22 | TA & Researcher in Docker Security and Python Education
+        </li>
+      </ul>
+    </section>
 
-  <section id="projects">
-    <!-- Include Projects section -->
-    <h2>Projects</h2>
-    <div>
-      <!-- Content from Projects.html will be included here -->
-    </div>
-  </section>
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <h3><a href="https://senior.ceng.metu.edu.tr/2023/engross/" target="_blank">ENGROSS</a></h3>
+          <p>Twitter NLP analyzer using BERT, Topic Modeling, Docker & CI/CD.</p>
+        </div>
+        <div class="project-card">
+          <h3><a href="https://medium.com/@alikomurcu/portals-with-opengl-d74da6241dd4" target="_blank">Portal Rendering</a></h3>
+          <p>Recursive portals using OpenGL & stencil buffers.</p>
+        </div>
+        <div class="project-card">
+          <h3><a href="https://github.com/alikomurcu/trenderer" target="_blank">TRenderer</a></h3>
+          <p>Physically-based real-time renderer using C++, OpenGL, and shaders.</p>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <footer>
-    <p>&copy; 2023 Ali Kömürcü. All rights reserved.</p>
+    <p>&copy; 2025 Ali Kömürcü</p>
   </footer>
 </body>
 </html>
