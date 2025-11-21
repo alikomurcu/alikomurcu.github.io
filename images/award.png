@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Placeholder SVG saved with .png extension so it's available at images/award.png -->
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="240" viewBox="0 0 24 24">
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <g transform="translate(2,2) scale(0.8)">
+    <path fill="#f5c542" d="M12 2a3 3 0 0 0-3 3v1.09A5.999 5.999 0 0 0 6 11c0 3.31 2.69 6 6 6s6-2.69 6-6a6 6 0 0 0-3-5.91V5a3 3 0 0 0-3-3z"/>
+    <path fill="#d99b12" d="M8 20l1.2-2.8L7 15l3.5.5L12 13l1.5 2.5L17 15l-2.2 2.2L16 20l-4-1-4 1z"/>
+    <circle cx="12" cy="10" r="1.2" fill="#fff"/>
+  </g>
+</svg>
