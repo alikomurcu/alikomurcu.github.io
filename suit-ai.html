@@ -200,6 +200,38 @@
         .cta-button:hover {
             background: #5a6fd8;
         }
+        
+        .hero-cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            color: white;
+            padding: 16px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-top: 30px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        
+        .hero-cta-button:hover {
+            background: rgba(255, 255, 255, 0.3);
+            border-color: rgba(255, 255, 255, 0.5);
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+        
+        .hero-cta-button i {
+            transition: transform 0.3s ease;
+        }
+        
+        .hero-cta-button:hover i {
+            transform: translateX(4px);
+        }
     </style>
 </head>
 <body>
@@ -242,6 +274,10 @@
             
             <h1>Suit AI</h1>
             <p>AI-powered virtual try-on application built with React Native and Expo. Experience the future of fashion with intelligent clothing simulation.</p>
+            <a href="https://suit-ai-website.vercel.app/#showcase" class="hero-cta-button" target="_blank">
+                <span>Explore the Showcase</span>
+                <i class="fas fa-arrow-right"></i>
+            </a>
         </section>
 
         <div class="project-content">
