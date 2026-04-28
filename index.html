@@ -433,7 +433,7 @@
       color: 0xc4b5fd, transparent: true, opacity: 0.55
     });
     const mobius = new THREE.LineSegments(mobiusEdges, mobiusMat);
-    mobius.rotation.x = Math.PI / 6;
+    mobius.rotation.z = Math.PI / 6;
     scene.add(mobius);
 
     function resize() {
@@ -456,7 +456,6 @@
         s.mesh.rotation.x += s.speed[0];
         s.mesh.rotation.y += s.speed[1];
       });
-      mobius.rotation.y += 0.003;
       mobius.rotation.z += 0.0008;
       camera.position.x += (mx * 0.6 - camera.position.x) * 0.04;
       camera.position.y += (-my * 0.4 - camera.position.y) * 0.04;
