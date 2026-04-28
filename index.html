@@ -4,155 +4,532 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ali Kömürcü</title>
+  <title>Ali Kömürcü · Full-Stack AI Engineer</title>
   <link rel="stylesheet" href="src/assets/styles.css">
-  <!-- Font Awesome CDN -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+    }
+  }
+  </script>
 </head>
 
 <body>
-  <header>
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+  <div class="bg-aurora" aria-hidden="true">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+  </div>
+
+  <header class="glass-nav">
     <nav>
-      <div class="logo">Ali Kömürcü</div>
+      <a href="#hero" class="logo">Ali Kömürcü</a>
       <ul>
         <li><a href="#about">About</a></li>
         <li><a href="#experience">Experience</a></li>
-        <li><a href="#education">Education</a></li>
         <li><a href="#projects">Projects</a></li>
-        <li><a href="#awards">Awards</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#education">Education</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <section id="about">
-      <h2>About Me</h2>
-      <p>
-        Hi, I'm Ali Kömürcü, a software engineer specializing in computer graphics with over 3 years of experience.
-        I build high-fidelity simulation environments in autonomous driving, maritime, and gaming industries.
-        Proficient in Unreal Engine, Unity, C++, Python, and real-time rendering systems.
-        I'm currently pursuing a Master's degree in Visual Computing at TU Wien.
-      </p>
-      <br>
-      <p>
-        <i class="fas fa-map-marker-alt"></i> Vienna, Austria
-      </p>
-      <p class="social-icons">
-        <a href="mailto:alikomurcu32430@gmail.com"><i class="fas fa-envelope fa-lg"></i></a>
-        <a href="https://linkedin.com/in/alikomurcu" target="_blank"><i class="fab fa-linkedin fa-lg"></i></a>
-        <a href="https://github.com/alikomurcu" target="_blank"><i class="fab fa-github fa-lg"></i></a>
-        <a href="https://medium.com/@alikomurcu" target="_blank"><i class="fab fa-medium fa-lg"></i></a>
-        <a href="https://www.shadertoy.com/user/cizenadam" target="_blank" aria-label="ShaderToy Profile"><i
-            class="fas fa-paint-brush fa-lg"></i></a>
-        <a href="https://www.youtube.com/@Ali-Komurcu" target="_blank" aria-label="YouTube Channel">
-          <i class="fab fa-youtube fa-lg"></i>
-        </a>
-      </p>
-
-    </section>
-
-    <section id="experience">
-      <h2>Experience</h2>
-      <ul class="timeline">
-        <li>
-          <strong>Research Intern – TU Wien</strong><br>
-          <span>Vienna, Austria | Oct 2025 – Present</span>
-          <p>Working in <a href="https://projekte.ffg.at/projekt/5129079" target="_blank"> Gigabot</a> project.</p>
-          <p>Researching on computer vision algorithms such as point cloud registration.</p>
-        </li>
-        <li>
-        <li>
-          <strong>Software Engineer – Kuartis</strong><br>
-          <span>Ankara, Turkey | Apr 2024 – Jan 2025</span>
-          <p>Built 3D simulation environments with Unreal Engine & Carla for autonomous driving. Developed KML-to-mesh
-            converter and sensor simulators for LiDAR, Radar, and Cameras using C++ and ROS2.</p>
-        </li>
-        <li>
-          <strong>Software Engineer – SimBT</strong><br>
-          <span>Ankara, Turkey | Sep 2023 – Apr 2024</span>
-          <p>Created maritime simulations in Unity, including cloth/rope physics, LNG ship movement, and procedural
-            fishing nets. Designed WPF UI panels for educational use.</p>
-        </li>
-        <li>
-          <strong>Software Engineer (Game Dev) – Beren Studio</strong><br>
-          <span>Ankara, Turkey | Jul 2022 – Mar 2023</span>
-          <p>Developed VR shooting and portal games in Unity with hand-based spaceship controls.</p>
-        </li>
-        <li>
-          <strong>AR Intern – Mia Tech</strong><br>
-          <span>Ankara, Turkey | Aug 2021 – Sep 2021</span>
-          <p>Built indoor AR navigation with Unity and ARKit/ARCore. Used Dijkstra’s algorithm for best-route finding.
-          </p>
-        </li>
-      </ul>
-    </section>
-
-    <section id="education">
-      <h2>Education</h2>
-      <ul>
-        <li>
-          <strong>M.Sc. in Computer Science – TU Wien</strong><br>
-          <span>Vienna, Austria | Feb 2025 – Present</span><br>
-          Specialization in Visual Computing (Advanced Rendering)
-        </li>
-        <li>
-          <strong>B.Sc. in Computer Engineering – METU</strong><br>
-          <span>Ankara, Turkey | Jul 2023</span><br>
-          GPA: 3.22 | TA & Researcher in Docker Security and Python Education
-        </li>
-      </ul>
-    </section>
-
-    <section id="projects">
-      <h2>Projects</h2>
-      <div class="projects-grid">
-        <div class="project-card">
-          <h3><a href="suit-ai.html">Suit AI</a></h3>
-          <p>AI based try-on APP, built with React Native and Expo. Coming to App Store and Google Play Store soon.</p>
+    <section id="hero" class="hero">
+      <div class="hero-inner reveal">
+        <span class="eyebrow">
+          <span class="dot"></span> Available for AI engineering work
+        </span>
+        <h1 class="hero-title">
+          Full-Stack <span class="gradient-text">AI Engineer</span>
+          <br>building agentic systems.
+        </h1>
+        <p class="hero-sub">
+          I ship multi-agent orchestration, LLM pipelines, and end-to-end products
+          from zero to deployment. Based in Vienna, Austria.
+        </p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary">See projects <i class="fas fa-arrow-right"></i></a>
+          <a href="mailto:alikomurcu32430@gmail.com" class="btn btn-ghost">Get in touch</a>
         </div>
-        <div class="project-card">
-          <h3><a href="https://senior.ceng.metu.edu.tr/2023/engross/" target="_blank">ENGROSS</a></h3>
-          <p>Twitter NLP analyzer using BERT, Topic Modeling, Docker & CI/CD.</p>
-        </div>
-        <div class="project-card">
-          <h3><a href="https://medium.com/@alikomurcu/portals-with-opengl-d74da6241dd4" target="_blank">Portal
-              Rendering</a></h3>
-          <p>Recursive portals using OpenGL & stencil buffers.</p>
-        </div>
-        <div class="project-card">
-          <h3><a href="https://github.com/alikomurcu/trenderer" target="_blank">TRenderer</a></h3>
-          <p>Physically-based real-time renderer using C++, OpenGL, and shaders.</p>
-        </div>
-      </div>
-
-      <h3 style="margin-top: 2rem; margin-bottom: 1rem; color: var(--primary);">Games</h3>
-      <div class="projects-grid">
-        <div class="project-card">
-          <h3><a href="https://www.youtube.com/playlist?list=PLkt5CVL5yeXtrKw3-BECLwBXXjKG8gvdR" target="_blank">VR
-              Games</a></h3>
-          <p>VR Game projects that I created with Unreal Engine 5.</p>
+        <div class="hero-marquee">
+          <span>Anthropic Claude</span><span>·</span>
+          <span>OpenAI</span><span>·</span>
+          <span>Next.js</span><span>·</span>
+          <span>TypeScript</span><span>·</span>
+          <span>Python</span><span>·</span>
+          <span>RAG</span><span>·</span>
+          <span>Multi-Agent</span><span>·</span>
+          <span>ROS2</span>
         </div>
       </div>
     </section>
 
-    <section id="awards">
-      <div class="awards-section">
-        <h2>Awards</h2>
-        <div class="award-card">
-          <img src="images/Exner_AWARD.png" alt="Award" class="award-img" />
-          <div class="award-details">
-            <strong>Surprising Milestone Award</strong>
-            <p>We won the suprising milestone award in Exner Lectures 2025 with my team. View our project <a
-                href="https://projekte.ffg.at/projekt/5129079" target="_blank"> here. </a></p>
+    <section id="about" class="reveal">
+      <div class="section-head">
+        <span class="section-tag">01 · About</span>
+        <h2>Hi, I'm Ali.</h2>
+      </div>
+      <div class="about-grid">
+        <p class="lead">
+          I'm a Full-Stack AI Engineer with <strong>3+ years</strong> shipping
+          multi-agent orchestration systems, LLM pipelines, and production full-stack
+          applications. I live inside <strong>Claude Code</strong> and <strong>Cursor</strong>,
+          and I'm fluent with <strong>Anthropic</strong> and <strong>OpenAI</strong> APIs.
+          Strong background in <strong>real-time rendering</strong>, <strong>Vulkan</strong>,
+          and <strong>3D Gaussian Splatting</strong>. Currently completing my M.Sc. in
+          Computer Science at TU Wien.
+        </p>
+        <div class="stat-grid">
+          <div class="stat-card">
+            <div class="stat-num">3+</div>
+            <div class="stat-label">Years shipping production AI</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num">1.25</div>
+            <div class="stat-label">M.Sc. GPA · TU Wien (Bavarian)</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num">∞</div>
+            <div class="stat-label">Lines written with Claude Code</div>
           </div>
         </div>
+      </div>
+      <p class="social-icons">
+        <a href="mailto:alikomurcu32430@gmail.com" aria-label="Email"><i class="fas fa-envelope fa-lg"></i></a>
+        <a href="https://linkedin.com/in/alikomurcu" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin fa-lg"></i></a>
+        <a href="https://github.com/alikomurcu" target="_blank" aria-label="GitHub"><i class="fab fa-github fa-lg"></i></a>
+        <a href="https://medium.com/@alikomurcu" target="_blank" aria-label="Medium"><i class="fab fa-medium fa-lg"></i></a>
+        <a href="https://www.shadertoy.com/user/cizenadam" target="_blank" aria-label="ShaderToy"><i class="fas fa-paint-brush fa-lg"></i></a>
+        <a href="https://www.youtube.com/@Ali-Komurcu" target="_blank" aria-label="YouTube"><i class="fab fa-youtube fa-lg"></i></a>
+      </p>
+    </section>
+
+    <section id="experience" class="reveal">
+      <div class="section-head">
+        <span class="section-tag">02 · Experience</span>
+        <h2>Where I've shipped.</h2>
+      </div>
+      <ul class="timeline">
+        <li class="timeline-item">
+          <div class="timeline-meta">
+            <span class="timeline-date">Mar 2026 · Present</span>
+            <span class="timeline-loc">Vienna, AT</span>
+          </div>
+          <div class="timeline-card">
+            <h3>AI Engineer · Atelier04</h3>
+            <ul>
+              <li>Architecting <strong>multi-agent orchestration</strong> systems with in-house LLM routing
+                (Anthropic + OpenAI) to automate complex business workflows end-to-end.</li>
+              <li>Owning full-stack delivery: <strong>Next.js</strong>/TypeScript frontend,
+                <strong>Python</strong> backend, containerised deployment.</li>
+              <li>Designing agentic workflows that surface insights to non-technical stakeholders.</li>
+            </ul>
+          </div>
+        </li>
+        <li class="timeline-item">
+          <div class="timeline-meta">
+            <span class="timeline-date">Sep 2025 · Present</span>
+            <span class="timeline-loc">TU Wien</span>
+          </div>
+          <div class="timeline-card">
+            <h3>Research Engineer · TU Wien</h3>
+            <ul>
+              <li>Owning end-to-end delivery on the
+                <a href="https://projekte.ffg.at/projekt/5129079" target="_blank">Gigabot</a> project:
+                stereo-vision pipeline (photogrammetry + GICP), real-time point cloud renderer,
+                <strong>ROS2</strong> agent comms, live streaming over private 5G.</li>
+              <li>Applying <strong>3D Gaussian Splatting</strong> to LiDAR data for scene reconstruction at VRVis.</li>
+              <li>🏆 <strong>Exner Lectures Award</strong> winner.</li>
+            </ul>
+          </div>
+        </li>
+        <li class="timeline-item">
+          <div class="timeline-meta">
+            <span class="timeline-date">Apr 2024 · Jan 2025</span>
+            <span class="timeline-loc">Ankara, TR</span>
+          </div>
+          <div class="timeline-card">
+            <h3>Software Engineer · Kuartis (Autonomous Driving)</h3>
+            <ul>
+              <li>Built <strong>UE5</strong> simulation environments &amp; data pipelines for AV agent testing;
+                Docker; ROS2 multi-agent comms.</li>
+              <li>Multi-sensor processing (Radar, LiDAR, Camera) at <strong>&lt;5&nbsp;ms</strong> latency
+                via multithreading and custom network protocols.</li>
+            </ul>
+          </div>
+        </li>
+        <li class="timeline-item">
+          <div class="timeline-meta">
+            <span class="timeline-date">2021 · 2024</span>
+            <span class="timeline-loc">Ankara, TR</span>
+          </div>
+          <div class="timeline-card subtle">
+            <h3>Earlier · SimBT · Beren Studio · Mia Tech</h3>
+            <p>Software Engineer roles across physics simulation, VR/XR, and AR
+              (Unity, Unreal, WPF, ARKit/ARCore).</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section id="projects" class="reveal">
+      <div class="section-head">
+        <span class="section-tag">03 · Projects</span>
+        <h2>Selected work.</h2>
+      </div>
+
+      <div class="bento">
+        <a class="bento-card bento-feature" href="https://github.com/alikomurcu/genai-rag" target="_blank">
+          <div class="bento-icon"><i class="fas fa-database"></i></div>
+          <div class="bento-body">
+            <h3>RAG System</h3>
+            <p>Full-stack <strong>RAG</strong>: vector embeddings (pgvector-style),
+              semantic search, LLM integration. Flask + Nuxt.js, shipped to production.</p>
+            <span class="bento-link">View on GitHub <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </a>
+
+        <div class="bento-card">
+          <div class="bento-icon"><i class="fas fa-robot"></i></div>
+          <h3>Mini-OpenClaw</h3>
+          <p>LLM-orchestrated personal assistant. Context engineering, tool use, agentic workflows.</p>
+        </div>
+
+        <a class="bento-card bento-tall" href="https://suit-ai-website.vercel.app" target="_blank">
+          <div class="bento-icon"><i class="fas fa-tshirt"></i></div>
+          <h3>Suit AI</h3>
+          <p>AI-powered virtual try-on. React Native + Firebase + diffusion models. Shipped to Google Play Store.</p>
+          <div class="bento-actions">
+            <span class="bento-link">Visit site <i class="fas fa-arrow-right"></i></span>
+            <span class="chip" data-href="https://play.google.com/store/apps/details?id=com.suitai.tryon">
+              <i class="fab fa-google-play"></i> Play Store
+            </span>
+          </div>
+        </a>
+
+        <a class="bento-card" href="https://senior.ceng.metu.edu.tr/2023/engross/" target="_blank">
+          <div class="bento-icon"><i class="fas fa-comment-dots"></i></div>
+          <h3>ENGROSS</h3>
+          <p>Twitter NLP. <strong>BERT</strong> embeddings, <strong>LDA</strong> topics,
+            Elasticsearch / Kibana.</p>
+        </a>
+
+        <a class="bento-card" href="https://github.com/alikomurcu/cg25-renderforge" target="_blank">
+          <div class="bento-icon"><i class="fas fa-cube"></i></div>
+          <h3>RenderForge</h3>
+          <p>C++ / <strong>Vulkan</strong> renderer. SSAO, deferred shading, PBR. From scratch.</p>
+        </a>
+
+        <a class="bento-card" href="https://medium.com/@alikomurcu/portals-with-opengl-d74da6241dd4" target="_blank">
+          <div class="bento-icon"><i class="fas fa-circle-notch"></i></div>
+          <h3>Portal Rendering</h3>
+          <p>Recursive portals using OpenGL &amp; stencil buffers.</p>
+        </a>
+
+        <a class="bento-card bento-wide" href="https://www.youtube.com/playlist?list=PLkt5CVL5yeXtrKw3-BECLwBXXjKG8gvdR" target="_blank">
+          <div class="bento-icon"><i class="fas fa-vr-cardboard"></i></div>
+          <h3>VR Games</h3>
+          <p>VR game projects built with Unreal Engine 5. Playlist on YouTube.</p>
+        </a>
+      </div>
+    </section>
+
+    <section id="skills" class="reveal">
+      <div class="section-head">
+        <span class="section-tag">04 · Stack</span>
+        <h2>Tools I reach for.</h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-row">
+          <span class="skill-label">AI &amp; Agents</span>
+          <span class="skill-tags">
+            <span class="tag primary-tag">LLM Orchestration</span>
+            <span class="tag primary-tag">Multi-Agent Systems</span>
+            <span class="tag primary-tag">RAG</span>
+            <span class="tag primary-tag">Prompt &amp; Context Engineering</span>
+            <span class="tag">Diffusion Models</span>
+            <span class="tag">NLP</span>
+          </span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-label">Full-Stack</span>
+          <span class="skill-tags">
+            <span class="tag primary-tag">TypeScript</span>
+            <span class="tag primary-tag">Next.js</span>
+            <span class="tag primary-tag">React</span>
+            <span class="tag primary-tag">Python</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">Flask</span>
+            <span class="tag">PostgreSQL</span>
+            <span class="tag">Docker</span>
+            <span class="tag">Azure / GCP</span>
+          </span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-label">Graphics &amp; Rendering</span>
+          <span class="skill-tags">
+            <span class="tag primary-tag">Vulkan</span>
+            <span class="tag primary-tag">Real-Time Rendering</span>
+            <span class="tag primary-tag">3D Gaussian Splatting</span>
+            <span class="tag">OpenGL</span>
+            <span class="tag">GLSL Shaders</span>
+            <span class="tag">PBR</span>
+            <span class="tag">Photogrammetry</span>
+            <span class="tag">Point Clouds</span>
+            <span class="tag">Unreal Engine 5</span>
+            <span class="tag">Unity</span>
+          </span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-label">AI APIs &amp; Tools</span>
+          <span class="skill-tags">
+            <span class="tag primary-tag">Anthropic (Claude)</span>
+            <span class="tag primary-tag">OpenAI</span>
+            <span class="tag primary-tag">Claude Code</span>
+            <span class="tag primary-tag">Cursor</span>
+            <span class="tag">Firebase</span>
+            <span class="tag">React Native</span>
+          </span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-label">Languages</span>
+          <span class="skill-tags">
+            <span class="tag">Python</span>
+            <span class="tag">TypeScript</span>
+            <span class="tag">C++</span>
+            <span class="tag">C#</span>
+            <span class="tag muted">English C1</span>
+            <span class="tag muted">Turkish · Native</span>
+            <span class="tag muted">German A2</span>
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <section id="education" class="reveal">
+      <div class="section-head">
+        <span class="section-tag">05 · Education</span>
+        <h2>Academic background.</h2>
+      </div>
+      <div class="edu-grid">
+        <div class="edu-card">
+          <div class="edu-year">2025 · Present</div>
+          <h3>M.Sc. Computer Science</h3>
+          <div class="edu-school">TU Wien · Vienna, AT</div>
+          <p>GPA <strong>1.25</strong> (Bavarian) · Machine Learning · Generative AI (LLMs) · Applied GenAI</p>
+        </div>
+        <div class="edu-card">
+          <div class="edu-year">2019 · 2023</div>
+          <h3>B.Sc. Computer Engineering</h3>
+          <div class="edu-school">METU · Ankara, TR</div>
+          <p>GPA <strong>3.22 / 4.0</strong> · Python TA × 3 semesters</p>
+        </div>
+        <a class="edu-card edu-award" href="images/Exner_AWARD.png" target="_blank" rel="noopener"
+           data-preview="images/Exner_AWARD.png">
+          <div class="award-thumb">
+            <img src="images/Exner_AWARD.png" alt="Exner Lectures Award certificate" loading="lazy" />
+            <span class="award-hint"><i class="fas fa-up-right-and-down-left-from-center"></i> Hover to preview · Click to open</span>
+          </div>
+          <div class="edu-year">2025</div>
+          <h3>🏆 Exner Lectures Award</h3>
+          <div class="edu-school">Surprising Milestone · Gigabot, TU Wien</div>
+        </a>
+      </div>
+    </section>
+
+    <section class="cta reveal">
+      <div class="cta-card">
+        <h2>Let's build something.</h2>
+        <p>Open to collaborations on agentic systems, LLM products, and ambitious full-stack work.</p>
+        <a href="mailto:alikomurcu32430@gmail.com" class="btn btn-primary">Say hello <i class="fas fa-paper-plane"></i></a>
       </div>
     </section>
   </main>
 
+  <!-- Floating image preview (used by award thumb) -->
+  <div id="img-preview" class="img-preview" aria-hidden="true">
+    <img alt="" />
+  </div>
+
   <footer>
-    <p>&copy; 2025 Ali Kömürcü</p>
+    <p>&copy; 2026 Ali Kömürcü · <em>Think big, work smart.</em></p>
   </footer>
+
+  <script type="module">
+    import * as THREE from 'three';
+
+    const canvas = document.getElementById('bg-canvas');
+    const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(45, 1, 0.1, 100);
+    camera.position.z = 8;
+
+    const wire = new THREE.LineBasicMaterial({ color: 0xa78bfa, transparent: true, opacity: 0.55 });
+    const wire2 = new THREE.LineBasicMaterial({ color: 0x60a5fa, transparent: true, opacity: 0.45 });
+    const wire3 = new THREE.LineBasicMaterial({ color: 0xf472b6, transparent: true, opacity: 0.45 });
+
+    function makeWire(geo, mat) {
+      const edges = new THREE.EdgesGeometry(geo, 1);
+      return new THREE.LineSegments(edges, mat);
+    }
+
+    const shapes = [
+      { mesh: makeWire(new THREE.IcosahedronGeometry(1.2, 0), wire),       pos: [-3.2,  1.6, 0], speed: [0.0025, 0.0035] },
+      { mesh: makeWire(new THREE.OctahedronGeometry(1.0, 0), wire2),       pos: [ 3.5, -1.4, -1], speed: [0.0030, -0.0020] },
+      { mesh: makeWire(new THREE.TorusKnotGeometry(0.7, 0.22, 64, 8), wire3), pos: [ 0.2,  0.0, -2], speed: [0.0015, 0.0025] },
+      { mesh: makeWire(new THREE.DodecahedronGeometry(0.9, 0), wire),      pos: [-4.0, -2.0, -1], speed: [-0.0020, 0.0030] },
+      { mesh: makeWire(new THREE.TetrahedronGeometry(0.85, 0), wire2),     pos: [ 3.4,  1.8, -2], speed: [0.0025, 0.0030] },
+    ];
+
+    shapes.forEach(s => {
+      s.mesh.position.set(...s.pos);
+      scene.add(s.mesh);
+    });
+
+    // Möbius strip — center stage, wireframe
+    function makeMobius(uSeg = 120, vSeg = 8, R = 1.6, w = 0.6) {
+      const verts = [];
+      for (let i = 0; i <= uSeg; i++) {
+        for (let j = 0; j <= vSeg; j++) {
+          const u = (i / uSeg) * Math.PI * 2;
+          const v = (j / vSeg - 0.5) * 2;
+          const x = (R + (v * w / 2) * Math.cos(u / 2)) * Math.cos(u);
+          const y = (R + (v * w / 2) * Math.cos(u / 2)) * Math.sin(u);
+          const z = (v * w / 2) * Math.sin(u / 2);
+          verts.push(x, y, z);
+        }
+      }
+      const idx = [];
+      const stride = vSeg + 1;
+      for (let i = 0; i < uSeg; i++) {
+        for (let j = 0; j < vSeg; j++) {
+          const a = i * stride + j;
+          const b = (i + 1) * stride + j;
+          const c = (i + 1) * stride + (j + 1);
+          const d = i * stride + (j + 1);
+          idx.push(a, b, c, a, c, d);
+        }
+      }
+      const geo = new THREE.BufferGeometry();
+      geo.setAttribute('position', new THREE.Float32BufferAttribute(verts, 3));
+      geo.setIndex(idx);
+      geo.computeVertexNormals();
+      return geo;
+    }
+
+    const mobiusGeo = makeMobius();
+    const mobiusEdges = new THREE.EdgesGeometry(mobiusGeo, 1);
+    const mobiusMat = new THREE.LineBasicMaterial({
+      color: 0xc4b5fd, transparent: true, opacity: 0.55
+    });
+    const mobius = new THREE.LineSegments(mobiusEdges, mobiusMat);
+    mobius.rotation.x = Math.PI / 6;
+    scene.add(mobius);
+
+    function resize() {
+      const w = window.innerWidth, h = window.innerHeight;
+      renderer.setSize(w, h, false);
+      camera.aspect = w / h;
+      camera.updateProjectionMatrix();
+    }
+    resize();
+    window.addEventListener('resize', resize);
+
+    let mx = 0, my = 0;
+    window.addEventListener('mousemove', (e) => {
+      mx = (e.clientX / window.innerWidth - 0.5);
+      my = (e.clientY / window.innerHeight - 0.5);
+    });
+
+    function tick() {
+      shapes.forEach(s => {
+        s.mesh.rotation.x += s.speed[0];
+        s.mesh.rotation.y += s.speed[1];
+      });
+      mobius.rotation.y += 0.003;
+      mobius.rotation.z += 0.0008;
+      camera.position.x += (mx * 0.6 - camera.position.x) * 0.04;
+      camera.position.y += (-my * 0.4 - camera.position.y) * 0.04;
+      camera.lookAt(0, 0, 0);
+      renderer.render(scene, camera);
+      requestAnimationFrame(tick);
+    }
+    tick();
+  </script>
+
+  <script>
+    // Reveal on scroll
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+    // Nav blur on scroll
+    const nav = document.querySelector('.glass-nav');
+    const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 12);
+    document.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    // Subtle pointer-driven aurora movement
+    const aurora = document.querySelector('.bg-aurora');
+    document.addEventListener('mousemove', (e) => {
+      const x = (e.clientX / window.innerWidth - 0.5) * 20;
+      const y = (e.clientY / window.innerHeight - 0.5) * 20;
+      aurora.style.transform = `translate(${x}px, ${y}px)`;
+    });
+
+    // Bento card 3D tilt
+    document.querySelectorAll('.bento-card').forEach(card => {
+      card.addEventListener('mousemove', (e) => {
+        const r = card.getBoundingClientRect();
+        const x = (e.clientX - r.left) / r.width - 0.5;
+        const y = (e.clientY - r.top) / r.height - 0.5;
+        card.style.transform = `perspective(900px) rotateX(${(-y * 6).toFixed(2)}deg) rotateY(${(x * 6).toFixed(2)}deg) translateY(-4px)`;
+      });
+      card.addEventListener('mouseleave', () => { card.style.transform = ''; });
+    });
+
+    // Inner "chip" inside Suit AI card: open Play Store without triggering parent link
+    document.querySelectorAll('.chip[data-href]').forEach(chip => {
+      chip.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        window.open(chip.dataset.href, '_blank', 'noopener');
+      });
+    });
+
+    // Floating image preview: shown on hover of [data-preview], following cursor
+    const preview = document.getElementById('img-preview');
+    const previewImg = preview.querySelector('img');
+    const previewables = document.querySelectorAll('[data-preview]');
+    previewables.forEach(el => {
+      el.addEventListener('mouseenter', () => {
+        previewImg.src = el.dataset.preview;
+        preview.classList.add('show');
+      });
+      el.addEventListener('mousemove', (e) => {
+        const pad = 20;
+        const w = preview.offsetWidth, h = preview.offsetHeight;
+        let x = e.clientX + pad, y = e.clientY + pad;
+        if (x + w > window.innerWidth) x = e.clientX - w - pad;
+        if (y + h > window.innerHeight) y = e.clientY - h - pad;
+        preview.style.transform = `translate(${x}px, ${y}px)`;
+      });
+      el.addEventListener('mouseleave', () => {
+        preview.classList.remove('show');
+      });
+    });
+  </script>
 </body>
 
 </html>
